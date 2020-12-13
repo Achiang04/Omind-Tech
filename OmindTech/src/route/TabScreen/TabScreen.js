@@ -32,7 +32,7 @@ export default function TabScreen() {
           selectedTextColor: '#FFFFFF',
           tabBarIcon: ({color}) => (
             <Ionicons
-              name={'location-outline'}
+              name={'logo-youtube'}
               color={color}
               size={RFPercentage(3)}
             />
@@ -46,7 +46,7 @@ export default function TabScreen() {
           tabBarLabel: 'Diskusi',
           tabBarIcon: ({color}) => (
             <Ionicons
-              name={'heart-outline'}
+              name={'chatbubbles-outline'}
               color={color}
               size={RFPercentage(3)}
             />

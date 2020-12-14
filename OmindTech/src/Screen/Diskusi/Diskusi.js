@@ -43,7 +43,7 @@ export default function Diskusi() {
 
   return (
     <View style={styles.container}>
-      <Header name={'Buat Grup'} icon={'arrow-left'} />
+      <Header name={'Buat Grup'} />
       <View style={styles.cameraContainer}>
         <TouchableOpacity onPress={() => chooseImage()}>
           {image === '' ? (

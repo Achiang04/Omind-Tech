@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     elevation: 9,
   },
   image: {
-    width: wp(80),
+    width: wp(75),
     height: hp(80),
     borderRadius: 70,
   },
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     padding: wp(12.5),
   },
   name: {
-    fontSize: 20,
+    fontSize: RFPercentage(2),
     width: wp(175),
     fontWeight: '700',
   },
@@ -67,9 +67,9 @@ const styles = StyleSheet.create({
   },
   logout: {
     color: '#1F99D3',
-    marginTop: hp(7),
+    marginTop: hp(8),
     marginLeft: wp(20),
-    fontSize: RFPercentage(2.3),
+    fontSize: RFPercentage(2),
   },
 });
 

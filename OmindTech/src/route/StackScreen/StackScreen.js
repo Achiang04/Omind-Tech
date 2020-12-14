@@ -9,8 +9,8 @@ import EditProfile from '../../Screen/Profile/EditProfile';
 export default function StackScreen() {
   return (
     <Stack.Navigator headerMode={'none'}>
-      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="TabScreen" component={TabScreen} />
+      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Regis" component={Regis} />
       <Stack.Screen name="EditProfile" component={EditProfile} />
     </Stack.Navigator>

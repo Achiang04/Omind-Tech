@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, FlatList} from 'react-native';
+import {View, Text, FlatList, TouchableOpacity} from 'react-native';
 import axios from 'axios';
 import Header from '../../Reusable/Header/Header';
 import styles from './HomeStyle';
@@ -22,21 +22,42 @@ export default function Home() {
     getData();
   }, []);
 
+  const updateOnPress = (index) => {
+    const Warna = data.map((item) => {
+      item.selected = false;
+      return item;
+    });
+    Warna[index].selected = true;
+    setData(Warna);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Header name={'Home'} />
       </View>
       <ImageCarousel />
+      <Text style={styles.text}>Grup</Text>
       <FlatList
+        contentContainerStyle={{marginLeft: 20, marginRight: 20}}
+        showsHorizontalScrollIndicator={false}
+        horizontal
         data={data}
-        renderItem={({item}) => {
+        renderItem={({item, index}) => {
           return (
-            <View style={styles.container1}>
-              <Text>{item.key}</Text>
-              <Text>{item.type}</Text>
-              <Text>{item.value}</Text>
-            </View>
+            <TouchableOpacity
+              onPress={() => {
+                updateOnPress(index);
+              }}>
+              <View
+                style={
+                  item.selected ? styles.container1Press : styles.container1
+                }>
+                <Text>{item.key}</Text>
+                <Text>{item.type}</Text>
+                <Text>{item.value}</Text>
+              </View>
+            </TouchableOpacity>
           );
         }}
       />

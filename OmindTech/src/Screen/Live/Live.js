@@ -1,12 +1,30 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, ScrollView, Image} from 'react-native';
 import Header from '../../Reusable/Header/Header';
+import styles from './LiveStyle';
 
 export default function Live() {
   return (
-    <View>
+    <View style={styles.container}>
       <Header name={'Live'} />
-      <Text>a</Text>
+      <ScrollView>
+        <Image
+          style={styles.image}
+          source={require('../../assets/image/1.jpg')}
+        />
+        <Image
+          style={styles.image}
+          source={require('../../assets/image/2.jpg')}
+        />
+        <Image
+          style={styles.image}
+          source={require('../../assets/image/3.png')}
+        />
+        <Image
+          style={styles.image}
+          source={require('../../assets/image/4.jpg')}
+        />
+      </ScrollView>
     </View>
   );
 }

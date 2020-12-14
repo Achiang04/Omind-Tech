@@ -6,14 +6,6 @@ import {RFPercentage} from 'react-native-responsive-fontsize';
 export default function Buttons(props) {
   return (
     <View>
-      {/* <TouchableOpacity
-        style={[
-          styles.container,
-          {backgroundColor: props.bgColor, borderColor: props.bgColor},
-        ]}
-        onPress={props.press}>
-        <Text style={[styles.text, {color: props.color}]}>{props.text}</Text>
-      </TouchableOpacity> */}
       <TouchableOpacity
         style={[
           styles.container,

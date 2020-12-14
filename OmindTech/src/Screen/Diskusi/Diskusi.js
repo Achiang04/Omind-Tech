@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, alert, TouchableOpacity, Image} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Header from '../../Reusable/Header/Header';
-import {hp} from '../../Reusable/Responsive/dimen';
+import {hp, wp} from '../../Reusable/Responsive/dimen';
 import styles from './DiskusiStyle';
 import {RFPercentage} from 'react-native-responsive-fontsize';
 import ImagePicker from 'react-native-image-picker';
@@ -12,7 +12,7 @@ import Buttons from '../../Reusable/Buttons/Buttons';
 
 export default function Diskusi() {
   const [image, setImage] = useState('');
-  // const [slider, setSlider] = useState(0);
+  const [slider, setSlider] = useState(0);
   const [jenjang, setJenjang] = useState('');
 
   const chooseImage = () => {
@@ -62,7 +62,7 @@ export default function Diskusi() {
       </View>
       <Text style={styles.addFoto}>Tambahkan foto grup</Text>
       <TextBar ph={'Nama Grup'} />
-      <View style={styles.pilihJenjang}>
+      <View style={[styles.pilihJenjang, {marginBottom: hp(slider)}]}>
         <DropDownPicker
           items={[
             {label: 'SD', value: 'sd'},
@@ -71,8 +71,8 @@ export default function Diskusi() {
             {label: 'SMA', value: 'sma'},
           ]}
           style={styles.dropStyle}
-          // onOpen={() => setSlider(175)}
-          // onClose={() => setSlider(0)}
+          onOpen={() => setSlider(100)}
+          onClose={() => setSlider(0)}
           dropDownStyle={{backgroundColor: '#F3F3F3'}}
           activeLabelStyle={{color: 'black'}}
           defaultNull
@@ -84,7 +84,13 @@ export default function Diskusi() {
           }}
         />
       </View>
-      <Buttons text={'Buat Grup'} color={'#fff'} bgColor={'#1F99D3'} />
+      <Buttons
+        text={'Buat Grup'}
+        color={'#fff'}
+        bgColor={'#1F99D3'}
+        borColor={'#1F99D3'}
+        width={wp(320)}
+      />
     </View>
   );
 }

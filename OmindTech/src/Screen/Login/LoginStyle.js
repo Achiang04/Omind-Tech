@@ -18,9 +18,9 @@ const styles = StyleSheet.create({
   forgot: {
     color: '#FDCB5A',
     alignSelf: 'flex-end',
-    marginRight: hp(15),
-    marginTop: wp(3),
-    marginBottom: wp(30),
+    marginRight: wp(15),
+    marginTop: hp(3),
+    marginBottom: hp(30),
     textDecorationLine: 'underline',
   },
   container1: {

@@ -71,6 +71,7 @@ export default function EditProfile() {
   };
 
   const handleEdit = async () => {
+    setIndicator(true);
     try {
       const form = new FormData();
 
@@ -99,7 +100,7 @@ export default function EditProfile() {
         .catch((e) => {
           return e;
         });
-      setIndicator(false);
+      await setIndicator(false);
       navigation.replace('TabScreen', {screen: 'ProfileScreen'});
     } catch (error) {}
   };

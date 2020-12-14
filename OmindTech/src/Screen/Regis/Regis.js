@@ -120,7 +120,11 @@ export default function Regis({navigation}) {
         Keyboard.dismiss();
       }}>
       <View style={styles.container}>
-        <Header name={'Registrasi'} />
+        <Header
+          name={'Registrasi'}
+          icon={'arrow-left'}
+          press={() => navigation.replace('Welcome')}
+        />
         <ScrollView>
           <Text style={styles.welcome}>
             Masukkan Data Anda Untuk Membuat Akun
@@ -245,7 +249,7 @@ export default function Regis({navigation}) {
 
           <View style={styles.container1}>
             <Text style={styles.text1}>Sudah Punya Akun? Silahkan </Text>
-            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+            <TouchableOpacity onPress={() => navigation.replace('Login')}>
               <Text style={styles.text2}>Login</Text>
             </TouchableOpacity>
           </View>

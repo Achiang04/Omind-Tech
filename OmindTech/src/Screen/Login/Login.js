@@ -89,7 +89,11 @@ export default function Login({navigation}) {
         Keyboard.dismiss();
       }}>
       <View style={styles.container}>
-        <Header name={'Login'} />
+        <Header
+          name={'Login'}
+          icon={'arrow-left'}
+          press={() => navigation.replace('Welcome')}
+        />
         <View>
           <Text style={styles.welcome}>Selamat Datang</Text>
           <TextBar
@@ -189,7 +193,7 @@ export default function Login({navigation}) {
         />
         <View style={styles.container1}>
           <Text style={styles.text1}>Belum punya akun ? Silahkan </Text>
-          <TouchableOpacity onPress={() => navigation.navigate('Regis')}>
+          <TouchableOpacity onPress={() => navigation.replace('Regis')}>
             <Text style={styles.text2}>Daftar</Text>
           </TouchableOpacity>
         </View>

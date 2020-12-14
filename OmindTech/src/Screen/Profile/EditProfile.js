@@ -106,13 +106,13 @@ export default function EditProfile() {
 
   useEffect(() => {
     async function setProfile() {
-      const value = await AsyncStorage.getItem('userToken');
+      const token = await AsyncStorage.getItem('userToken');
       try {
         const response = await Axios.get(
           'https://vet-booking.herokuapp.com/user/edit',
           {
             headers: {
-              access_token: value,
+              access_token: token,
             },
           },
         );

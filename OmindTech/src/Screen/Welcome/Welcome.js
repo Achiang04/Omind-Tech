@@ -11,7 +11,7 @@ export default function Welcome({navigation}) {
         style={styles.image}
         source={require('../../assets/image/Omind_Tech.png')}
       />
-      <View style={styles.button}>
+      <View>
         <Buttons
           width={wp(320)}
           bgColor={'#FDCB5A'}

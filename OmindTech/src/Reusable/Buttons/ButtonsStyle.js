@@ -5,10 +5,10 @@ import {RFPercentage} from 'react-native-responsive-fontsize';
 const styles = StyleSheet.create({
   container: {
     borderWidth: 1,
-    width: '90%',
+    borderRadius: 7,
     alignSelf: 'center',
     padding: hp(10),
-    marginTop: hp(25),
+    marginTop: hp(35),
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {

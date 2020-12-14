@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     fontSize: RFPercentage(2.5),
     color: 'white',
     fontWeight: 'bold',
-    marginLeft: hp(15),
+    marginLeft: hp(20),
   },
   icon: {
     marginLeft: hp(15),

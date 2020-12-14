@@ -6,12 +6,18 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     width: wp(320),
     height: hp(40),
-    marginTop: hp(35),
     alignSelf: 'center',
     paddingLeft: wp(10),
     borderRadius: hp(7),
     borderColor: '#F4F4F4',
     backgroundColor: '#F4F4F4',
+  },
+  text: {
+    marginTop: hp(20),
+    marginBottom: hp(3),
+    marginLeft: wp(20),
+    alignSelf: 'flex-start',
+    color: '#1F99D3',
   },
 });
 

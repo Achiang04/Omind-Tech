@@ -1,12 +1,16 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import StackScreen from './src/route/StackScreen/StackScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import {Provider} from 'react-redux';
+import store from './src/redux/Store/store';
 console.disableYellowBox = true;
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <StackScreen />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <StackScreen />
+      </NavigationContainer>
+    </Provider>
   );
 }
